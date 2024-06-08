@@ -1,10 +1,135 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Power washing FAQ</title>
+    <link rel="stylesheet" href="bulma.min.css">
 </head>
+
 <body>
-    
+    <section class="hero is-info is-small">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                </div>
+        </div>
+        </nav>
+        </div>
+
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <p class="title">Power Washing FAQ</p>
+                <p class="subtitle">Frequently asked questions from <a
+                        href="https://www.reddit.com/r/pressurewashing/">r/pressurewashing</a></p>
+            </div>
+        </div>
+
+        <!-- Hero footer: will stick at the bottom -->
+        <div class="hero-foot">
+            <nav class="tabs">
+                <div class="container px-6">
+                    <ul>
+                        <li><a href="#shguide">SH Guide</a></li>
+                        <li><a>Surface cleaner Calculator</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section class="section">
+        <h1 class="title" id="shguide">SH Guide</h1>
+        <h2 class="subtitle">Choose the right amount of SH (Sodium Hypocloryte) for your application</h2>
+
+        <div class="select is-info is-rounded is-medium">
+            <select name="sh" id="shSelection">
+                <option value="">Select your SH concentration</option>
+                <option value="12.5">12.5% SH Concentration</option>
+                <option value="10">10% SH Concentration</option>
+                <option value="8">8% SH Concentration</option>
+                <option value="5">5% SH Concentration</option>
+            </select>
+        </div>
+
+        <div class="block">
+            Remember SH is used to remove organic stains.
+        </div>
+        <table class="table " id="shTable">
+            <thead>
+                <th>
+                    Application
+                </th>
+                <th>
+                    Concentration
+                </th>
+                <th>
+                    Ratio
+                </th>
+            </thead>
+            <tbody class="">
+                <tr>
+                    <th>Asphalt Roofs</th>
+                    <th class="has-text-centered">Min: 3% Max: 6%</th>
+                    <th id="ratio"></th>
+                </tr>
+
+                <tr>
+                    <th>Concrete Tile Roofd</th>
+                    <th class="has-text-centered">Min: 4% Max: 6%</th>
+                    <th id="ratio"></th>
+                </tr>
+
+                <tr>
+                    <th>Metal Roofs (Be careful using SH)</th>
+                    <th class="has-text-centered">Min: 1% Max: 3%</th>
+                    <th id="ratio"></th>
+                </tr>
+
+                <tr>
+                    <th>Vinyl Siding</th>
+                    <th class="has-text-centered">Min: 1% Max: 2%</th>
+                    <th id="ratio"></th>
+                </tr>
+
+                <tr>
+                    <th>Stucco Siding</th>
+                    <th class="has-text-centered">Min: 2% Max: 3%</th>
+                    <th id="ratio"></th>
+                </tr>
+
+                <tr>
+                    <th>Concrete Pre treatment</th>
+                    <th class="has-text-centered">Min: 1% Max: 3%</th>
+                    <th id="ratio"></th>
+                </tr>
+
+                <tr>
+                    <th>Concrete Post treatment</th>
+                    <th class="has-text-centered">Min: 3% Max: 3%</th>
+                    <th id="ratio"></th>
+                </tr>
+
+                <tr>
+                    <th>Wood (Pre soak with water)</th>
+                    <th class="has-text-centered">Min: 1% Max: 1%</th>
+                    <th id="ratio"></th>
+                </tr>
+
+                <tr>
+                    <th>Brick</th>
+                    <th class="has-text-centered">Min: 2% Max: 3%</th>
+                    <th id="ratio"></th>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </section>
+
+    <script src="calc.js"></script>
 </body>
+
 </html>
