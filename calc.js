@@ -35,15 +35,28 @@ document.getElementById('shSelection').addEventListener('change', function () {
     });
 });
 
+document.getElementById('gpmInput').addEventListener('input', function () {
+    const selectedValue = parseInt(this.value);
+    const gpmTag = document.getElementById("gpmValue")
+    if (isNaN(selectedValue)) {
+        gpmTag.textContent = "";
+        return;
+    }
+    const roundedGPM = selectedValue * 4;
+
+    gpmTag.textContent = roundedGPM + " in.";
+
+});
+
 
 function getClosestConcentration(number) {
     if (number >= 1) {
         return "Use without dillute";
     }
     if (number >= 5) {
-        return "1 part of SH per "+ (parseFloat(number)-1) + " part of Water";
+        return "1 part of SH per " + (parseFloat(number) - 1) + " part of Water";
     }
-    
+
     let closestText = '';
     let closestDifference = Infinity;
 
